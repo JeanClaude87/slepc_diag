@@ -19,16 +19,19 @@ rstart, rend = A.getOwnershipRange()
 if rstart == 0:
 	A[0, :2] = [2, -1]
 	rstart += 1
+
 # last row
 if rend == n:
 	A[n-1, -2:] = [-1, 2]
 	rend -= 1
+
 # other rows
 for i in range(rstart, rend):
 	A[i, i-1:i+2] = [-1, 2, -1]
 
-A.assemble()
 print A
+
+A.assemble()
 
 E = SLEPc.EPS(); E.create()
 
