@@ -15,7 +15,8 @@ A.setUp()
 
 rstart, rend = A.getOwnershipRange()
 
-
+print rstart
+print rend
 
 
 # first row
