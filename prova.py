@@ -6,7 +6,7 @@ from slepc4py import SLEPc
 import numpy
 
 opts = PETSc.Options()
-n = opts.getInt('n', 3000)
+n = opts.getInt('n', 30)
 
 A = PETSc.Mat().create()
 A.setSizes([n, n])
