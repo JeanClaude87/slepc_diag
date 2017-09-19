@@ -15,10 +15,6 @@ A.setUp()
 
 rstart, rend = A.getOwnershipRange()
 
-print rstart
-print rend
-
-
 # first row
 if rstart == 0:
 	A[0, :2] = [2, -1]
@@ -32,6 +28,7 @@ for i in range(rstart, rend):
 	A[i, i-1:i+2] = [-1, 2, -1]
 
 A.assemble()
+print A
 
 E = SLEPc.EPS(); E.create()
 
